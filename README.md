@@ -6,7 +6,7 @@ This is a **particle emitter** application built with Kotlin and Android Jetpack
 
 Check out this animated demo:
 
-![particleemitterdemo-ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/7c229d03-26c9-4812-957a-d9ac3878c5dd)
+![Animated particle emitter demo](https://github.com/user-attachments/assets/7c229d03-26c9-4812-957a-d9ac3878c5dd)
 
 ## Features
 
@@ -14,7 +14,7 @@ Check out this animated demo:
 - Multiple emission patterns: right-left fan, right fan, full circle
 - Customizable themes (random, brand-specific, sparks)
 
-- ## Configurable Parameters
+## Configurable Parameters
 
 The particle emitter is designed to be flexible. Here are the key configurable parameters:
 
@@ -53,8 +53,36 @@ The particle emitter is designed to be flexible. Here are the key configurable p
    - **Usage:** Allows you to overlay content (e.g., centered text) on top of the animated particles.
    - **Customizability:** Use modifiers to adjust the size and alignment of the background container.
 
-## Installation
+## Run the demo
+
+This repository contains an Android demo app, rather than a published library dependency.
+
+### Requirements
+
+- Android Studio with support for Android Gradle Plugin 8.1.4.
+- JDK 17 for Gradle.
+- Android SDK Platform 33.
+- An emulator or Android device running Android 11 (API 30) or later.
+
+### Setup
 
 1. Clone the repository:
+
    ```bash
-   git clone https://github.com/AndriaNjoku/Particle-Emitter-.git
+   git clone https://github.com/AndriaNjoku/Particle-Emitter.git
+   cd Particle-Emitter
+   ```
+
+2. Open the repository root in Android Studio.
+3. Set `sdk.dir` in `local.properties` to your own Android SDK location. The checked-in value is machine-specific.
+4. Sync Gradle, select the `app` run configuration, and run it on your device or emulator.
+
+To build a debug APK from the repository root:
+
+```bash
+./gradlew :app:assembleDebug
+```
+
+On Windows, use `gradlew.bat :app:assembleDebug` instead.
+
+The SDK requirements above come from [the app configuration](app/build.gradle.kts). The build command is provided for local use; this documentation update does not establish a verified build or device-test result.
